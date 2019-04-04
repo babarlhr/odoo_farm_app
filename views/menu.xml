@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_myfarm" name="Farm"/>
+
+    <act_window id="action_myfarm" name="Collection"  res_model="farm.app.dcollection" view_mode="tree,form"/>
+    <menuitem id="farm_production" name="Production" parent="menu_myfarm" action="action_myfarm" sequence="1"/>
+    <menuitem id="daily_collection" name="Daily Collection" parent="farm_production" action="action_myfarm" sequence="1"/>
+
+    <act_window id="action_costing" name="Costing" res_model="farm.app.costing" view_mode="tree,form"/>
+    <menuitem id="costing" name="Costing" parent="menu_myfarm" sequence="4"/>
+    <menuitem id="pcosting" name="Cost of Production" parent="costing" action="action_costing" sequence="1"/>
+
+    <act_window id="action_catalog" name="catalog" res_model="product.template" view_mode="tree,form"/>
+    <menuitem id="catalog" name="Catalog" parent="menu_myfarm" sequence="5"/>
+    <menuitem id="pcosting" name="Catalog" parent="catalog" action="action_catalog" sequence="1"/>
+
+    <menuitem id="farm_sales" name="Sales" parent="menu_myfarm" action="action_myfarm" sequence="2"/>
+    <menuitem id="sales_customers" name="Customers" parent="farm_sales" action="base.action_partner_form" sequence="1"/>
+    <menuitem id="customer_orders" name="Customer Orders" parent="farm_sales" sequence="2" action="sale.action_orders"/>
+    <menuitem id="sale_quatation" name="Quotations" parent="farm_sales" action="sale.action_quotations" sequence="3"/>
+    <menuitem id="invoice" name="Invoicing" parent="menu_myfarm" action="sale.action_orders_to_invoice" sequence="3"/>
+    <menuitem id="sale_to_invoice" name="Sales to Invoice" parent="invoice" action="sale.action_orders_to_invoice"/>
+
+    <act_window id="action_stocking" name="stocking" res_model="farm.app.stocking" view_mode="tree,form"/>
+
+    <act_window id="action_config" name="Configuration" res_model="farm.app.house" view_mode="tree,form"/>
+    <menuitem id="config" name="Configuration" parent="menu_myfarm" action="action_myfarm" sequence="7"/>
+    <menuitem id="users" name="Users" parent="config" action="base.action_res_users" sequence="3"/>
+    <menuitem id="house_id" name="House" parent="config" sequence="1" action="action_config"/>
+    <menuitem id="Stock Management" name="Stocking" parent="config" action="action_stocking" sequence="2"/>
+    <menuitem id="notification" name="Notifications" parent="config" action="pop-up_reminders.action_popup_reminder" sequence="4"/>
+
+</odoo>

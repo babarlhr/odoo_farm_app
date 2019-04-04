@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="daily_view_tree_form" model="ir.ui.view">
+        <field name="name">daily form view</field>
+        <field name="model">farm.app.dcollection</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="house_number"/>
+                <field name="ecollected" sum="Total"/>
+                <field name="total_collected"/>
+                <field name="date"/>
+                <field name="Batch"/>
+                <field name="broken" sum="Total"/>
+                <field name="g_eggs" sum="Total"/>
+                <field name="stocking"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
