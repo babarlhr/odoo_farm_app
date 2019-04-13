@@ -19,7 +19,6 @@ class ModeOfPaymnent(models.Model):
     value = fields.Integer('Value',compute='_compute_sales_value')
     html = fields.Char('html')
 
-
     @api.depends('value')
     def _compute_sales_value(self):
         for this in self:

@@ -9,7 +9,7 @@ class Stocking(models.Model):
     _name = 'farm.app.stocking'
     _rec_name = 'stocking'
 
-    house_number = fields.Many2one('farm.app.house', string='House Number')
+    house_number = fields.Many2one('farm.app.house')
     batch_number = fields.Selection(related='house_number.batch_number')
     date = fields.Date('DATE', required=True)
     stocking = fields.Integer('Stock')

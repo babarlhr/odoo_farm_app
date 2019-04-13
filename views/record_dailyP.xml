@@ -12,8 +12,18 @@
                 <field name="Batch"/>
                 <field name="broken" sum="Total"/>
                 <field name="g_eggs" sum="Total"/>
-                <field name="stocking"/>
             </tree>
+
+        </field>
+    </record>
+    <record id="daily_view_graph" model="ir.ui.view">
+        <field name="name">daily graph view</field>
+        <field name="model">farm.app.dcollection</field>
+        <field name="arch" type="xml">
+             <graph string="Total collection">
+                <field name="g_eggs"/>
+                <field name="house_number"/>
+            </graph>
         </field>
     </record>
 </odoo>
