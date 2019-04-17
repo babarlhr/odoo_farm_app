@@ -6,4 +6,6 @@ from . import conf, \
     stocking,\
     house,\
     config, \
-    notification
+    notification, \
+    dashboard
+

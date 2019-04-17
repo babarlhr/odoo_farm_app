@@ -33,6 +33,19 @@
                     <attribute name="invisible">1</attribute>
                 </field>
 
+
+            </field>
+        </record>
+       <record id="view_customer_form" model="ir.ui.view">
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.action_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="company_type" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
             </field>
         </record>
 
@@ -45,12 +58,6 @@
             </field>
             <field name="payment_term_id" position="after">
                 <field name="mode_of_payment"/>
-            </field>
-            <field name="partner_id" position="after">
-                <field name="Number_of_tray"/>
-            </field>
-            <field name="Number_of_tray" position="after">
-                <field name="value"/>
             </field>
         </field>
     </record>

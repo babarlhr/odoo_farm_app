@@ -16,13 +16,13 @@
 
         </field>
     </record>
-    <record id="daily_view_graph" model="ir.ui.view">
-        <field name="name">daily graph view</field>
+      <record id="house_view_graph" model="ir.ui.view">
+        <field name="name">daily view graph</field>
         <field name="model">farm.app.dcollection</field>
         <field name="arch" type="xml">
-             <graph string="Total collection">
-                <field name="g_eggs"/>
+            <graph string="graphical">
                 <field name="house_number"/>
+                <field name="g_eggs"/>
             </graph>
         </field>
     </record>

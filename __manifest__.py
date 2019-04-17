@@ -17,6 +17,7 @@
         'views/stocking.xml',
         'views/house.xml',
         'views/res_partner.xml',
+        'views/dashboard.xml',
 
     ],
     'images': ['static/description/lo.jpeg'],

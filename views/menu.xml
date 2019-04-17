@@ -2,8 +2,11 @@
 <odoo>
     <menuitem id="menu_myfarm" name="Farm"/>
 
+
     <act_window id="action_myfarm" name="Collection"  res_model="farm.app.dcollection" view_mode="tree,form"/>
-    <menuitem id="farm_production" name="Production" parent="menu_myfarm" action="action_myfarm" sequence="1"/>
+    <menuitem id="farm_dashboard" name="Dashboard" parent="menu_myfarm" action="board.open_board_my_dash_action" sequence="1"/>
+
+    <menuitem id="farm_production" name="Production" parent="menu_myfarm" action="action_myfarm" sequence="2"/>
     <menuitem id="daily_collection" name="Daily Collection" parent="farm_production" action="action_myfarm" sequence="1"/>
 
     <act_window id="action_costing" name="Costing" res_model="farm.app.costing" view_mode="tree,form"/>
