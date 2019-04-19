@@ -18,11 +18,14 @@
     <menuitem id="pcosting" name="Catalog" parent="catalog" action="action_catalog" sequence="1"/>
 
     <menuitem id="farm_sales" name="Sales" parent="menu_myfarm" action="action_myfarm" sequence="2"/>
-    <menuitem id="sales_customers" name="Customers" parent="farm_sales" action="base.action_partner_form" sequence="1"/>
+    <menuitem id="sales_customers" name="Customers" parent="farm_sales" action="base.action_partner_form" sequence="2"/>
     <menuitem id="customer_orders" name="Customer Orders" parent="farm_sales" sequence="2" action="sale.action_orders"/>
     <menuitem id="sale_quatation" name="Quotations" parent="farm_sales" action="sale.action_quotations" sequence="3"/>
     <menuitem id="invoice" name="Invoicing" parent="menu_myfarm" action="sale.action_orders_to_invoice" sequence="3"/>
     <menuitem id="sale_to_invoice" name="Sales to Invoice" parent="invoice" action="sale.action_orders_to_invoice"/>
+
+    <menuitem id="farm_report" name="Report" parent="menu_myfarm" action="action_myfarm" sequence="3"/>
+    <menuitem id="sales_report" name="Sales Report" parent="farm_report" sequence="1" action="sale.action_order_report_all"/>
 
     <act_window id="action_stocking" name="stocking" res_model="farm.app.stocking" view_mode="tree,form"/>
 
