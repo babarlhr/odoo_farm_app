@@ -17,9 +17,6 @@ class MyConf(models.Model):
     broken = fields.Integer('Broken', required=True)
     g_eggs = fields.Integer(
         'Good', compute='_compute_good')
-    # stocking = fields.Many2one('farm.app.house', string='Stock Number')
-    # stocking = fields.Selection(
-    # related='house_number.stocking', readonly=True)
 
     @api.depends('ecollected')
     def _compute_total_eggs(self):
@@ -28,12 +25,6 @@ class MyConf(models.Model):
             this.total_collected = total_eggs
             if this.total_collected > 500:
                 raise exceptions.Warning('exceeded')
-            # cr = self.env.cr
-            # cr.execute("""
-            #            SELECT  stocking
-            #             FROM public.farm_app_stocking;
-            #            WHERE model = %s AND res_id in %s
-            #        """, (self._name, tuple(self.ids)))
 
     @api.depends('total_collected')
     def _compute_good(self):
