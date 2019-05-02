@@ -9,4 +9,4 @@ graph = modules.graph.Graph()
 
 
 class Dashboard(models.Model):
-    _name = 'farm.app.dashboard'
+    _name = 'student.portal.dashboard'

@@ -2,11 +2,9 @@
 <odoo>
     <record id="house_view_graph" model="ir.ui.view">
         <field name="name">daily view graph</field>
-        <field name="model">farm.app.dcollection</field>
+        <field name="model">student.portal.dashboard</field>
         <field name="arch" type="xml">
             <graph string="graphical" type="bar" stacked="true">
-                <field name="house_number" type="row"/>
-                <field name="g_eggs" type="col"/>
             </graph>
         </field>
     </record>

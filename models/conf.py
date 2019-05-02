@@ -23,8 +23,8 @@ class MyConf(models.Model):
         for this in self:
             total_eggs = this.ecollected * 30
             this.total_collected = total_eggs
-            if this.total_collected > 500:
-                raise exceptions.Warning('exceeded')
+            if this.total_collected > this.house_number.stock_number:
+                raise exceptions.Warning('Number should not exceed the stock in the house: %s' % this.house_number.stock_number)
 
     @api.depends('total_collected')
     def _compute_good(self):
