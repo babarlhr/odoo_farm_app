@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="vaccination_view_tree_form" model="ir.ui.view">
+        <field name="name">vaccination form view</field>
+        <field name="model">farm.app.vaccination</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="vaccination_title"/>
+                <field name="Description"/>
+                <field name="house_number"/>
+                <field name="Date"/>
+                <field name="next_vacc_date"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

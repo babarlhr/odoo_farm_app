@@ -7,5 +7,7 @@ from . import conf, \
     house,\
     config, \
     notification, \
-    dashboard
+    dashboard, \
+    vacination
+
 

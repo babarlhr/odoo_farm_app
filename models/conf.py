@@ -9,7 +9,6 @@ class MyConf(models.Model):
     house_number = fields.Many2one('farm.app.house', string='House Number')
     ecollected = fields.Float('Trays Collected', required=True)
     date = fields.Date('Date', required=True)
-
     Batch = fields.Selection(
         related='house_number.batch_number', readonly=True)
     total_collected = fields.Integer(

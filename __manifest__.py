@@ -18,6 +18,7 @@
         'views/house.xml',
         'views/res_partner.xml',
         'views/dashboard.xml',
+        'views/vaccination.xml',
 
     ],
     'images': ['static/description/lo.jpeg'],

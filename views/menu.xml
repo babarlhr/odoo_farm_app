@@ -36,7 +36,7 @@
     <menuitem id="Stock Management" name="Stocking" parent="config" action="action_stocking" sequence="2"/>
     <menuitem id="notification" name="Notifications" parent="config" action="pop-up_reminders.action_popup_reminder" sequence="4"/>
 
-    <act_window id="action_vaccination" name="Vaccination" view_mode="form,tree"/>
-    <menuitem id="vaccine" name="Vaccination" parent="menu_myfarm" action="action_vaccination" sequence="1"/>
+    <act_window id="action_vaccination" name="Vaccination" res_model="farm.app.vaccination" view_mode="form,tree"/>
+    <menuitem id="vaccine" name="Vaccination" parent="menu_myfarm" action="action_vaccination" sequence="4"/>
 
 </odoo>

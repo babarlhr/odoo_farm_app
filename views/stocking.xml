@@ -12,22 +12,4 @@
             </tree>
         </field>
     </record>
-    <record id="stocking_view_form" model="ir.ui.view">
-        <field name="name">stocking.view</field>
-        <field name="model">farm.app.stocking</field>
-        <field name="arch" type="xml">
-            <form string="Stocking">
-                <notebook>
-                    <page string="Stocking">
-                        <group>
-                            <field name="house_number" attrs="{'readonly': [('id', '!=', False)]}"/>
-                            <field name="batch_number" attrs="{'readonly': [('id', '!=', False)]}"/>
-                            <field name="date"/>
-                            <field name="stocking" />
-                        </group>
-                    </page>
-                </notebook>
-            </form>
-        </field>
-    </record>
 </odoo>
